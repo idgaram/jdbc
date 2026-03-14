@@ -22,14 +22,39 @@ public class Demo {
                 create
                  */
 
+//
+//                String createSql = "insert into new_student (name, age) values (?,?)";
+//                PreparedStatement ppst = connection.prepareStatement(createSql);
+//                ppst.setString(1,"Denis");
+//                ppst.setInt(2,5);
+//                int rowsCreate = ppst.executeUpdate();
+//                System.out.println("rows created: " + rowsCreate);
 
-                String createSql = "insert into new_student (name, age) values (?,?)";
-                PreparedStatement ppst = connection.prepareStatement(createSql);
-                ppst.setString(1,"Navin");
-                ppst.setInt(2,45);
-                int rowsAffected = ppst.executeUpdate();
-                System.out.println("rows affected: " + rowsAffected);
 
+
+
+
+                /*
+                update
+                 */
+
+//                String updateSql = "update new_student set name = ? where id = ?";
+//                PreparedStatement ppst = connection.prepareStatement(updateSql);
+//                ppst.setString(1, "Navin");
+//                ppst.setInt(2, 1);
+//                int rowsUpdated = ppst.executeUpdate();
+//                System.out.println("rows updated: " + rowsUpdated);
+
+
+                /*
+                delete
+                 */
+
+                String updateSql = "delete from new_student where id = ?";
+                PreparedStatement ppst = connection.prepareStatement(updateSql);
+                ppst.setInt(1, 1);
+                int rowsDeleted = ppst.executeUpdate();
+                System.out.println("rows deleted: " + rowsDeleted);
 
 
                 /*
@@ -59,9 +84,9 @@ public class Demo {
                     }
                 }
 
-                /*
-                update
-                 */
+
+
+
 
 
 
